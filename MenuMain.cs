@@ -50,7 +50,6 @@ namespace FlappyBird.Menu
         }
 
         // Update en tekenen
-        //logoanimation = wave
         // startbutton gametime = check of button is ingeklikt
         // start button clicked = gamemain naar game
         // update quit button
