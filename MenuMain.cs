@@ -49,22 +49,6 @@ namespace FlappyBird.Menu
             quitButton = new Button(sprite, new Point(Game1.screenWidth / 2, startButton.ButtonY + startButton.ButtonHeight * 2), new Rectangle(558, 268, 40, 14));
         }
 
-        // 1. setting the X component of the logoPosition vector to a value that centers the logo horizontally on the screen --> subtracting half of the logo's width from half of the screen's width
-        // 2.  counter variable + 1.
-        // 3. line checks if the logo's width has grown to be three times the width of the original logoSource image, and if the counter variable has reached 200
-        // true =  counter variable is reset to 0.
-
-
-        private void LogoAnimation()
-        {  
-            logoPosition.X = Game1.screenWidth / 2 - logoSize.X / 2;
-            counter++;
-            if (logoSize.X >= logoSource.Width * 3 && counter >= 200)
-            {
-                counter = 0;
-            }
-        }
-
         // Update en tekenen
         //logoanimation = wave
         // startbutton gametime = check of button is ingeklikt
@@ -75,7 +59,6 @@ namespace FlappyBird.Menu
         public override void Update(GameTime gameTime)
         {
             base.Update(gameTime);
-            LogoAnimation();
             startButton.Update(gameTime);
             if (startButton.Clicked)
                 GameMain.ChangeMenu = "game";
